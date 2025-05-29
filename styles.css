@@ -4,7 +4,7 @@ html, body {
     height: 100%;
     width: 100%;
     scrollbar-width: none;
-    overflow-x:visible;
+    overflow-x:hidden;
     box-sizing: border-box;
 }
 
