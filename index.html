@@ -3,73 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galaxy Home Daycare</title>
+    <title>testing website</title>
     <link rel="stylesheet" href="styles.css">
-
-    <meta property="og:title" content="Welcome to Galaxy Home Daycare" />
-    <meta property="og:description" content="We help children shine like stars." />
-    <meta property="og:image" content="https://galaxyhomedaycare.com/images/galaxy.jpg" />
-    <meta property="og:url" content="https://galaxyhomedaycare.com" />
-    <meta property="og:type" content="website" />
+    <script src="script.js" defer></script>
 </head>
 <body>
 <section id="top">
-    <div class="center-text">
+    <div class ="star-field"></div>
+    <canvas id="shooting-stars"></canvas>
+    <canvas id="background"></canvas>
+    <div class="content">
+        <div class="center-text">
         <h2>Welcome To</h2>
         <h1>Galaxy Home Daycare</h1>
-    </div>
-    <div class="custom-shape-divider-bottom-1717100624">
-        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-        </svg>
     </div>
 </section>
 <section id="middle">
     <h1 class="center-text">ABOUT US</h1>
     <div class="list">
-        <p>At Galaxy Home Daycare, we believe every child is like a star. Our mission is to help nurture these little stars and make them shine as brightly as possible in the future. We provide personalized care to support each child's cognitive, physical, and emotional development.</p>
+        <p class="foreground">At Galaxy Home Daycare, we believe every child is like a star. Our mission is to help nurture these little stars and make them shine as brightly as possible in the future. We provide personalized care to support each child's cognitive, physical, and emotional development.</p>
     </div>
 </section> 
 <section id="continuation"> <!-- NEED PHOTOS -->
     <div class ="images-text-pair">
-        <div id="images">
+        <div id="images">   
             <img src="images/oneagain.png" alt="Images2323">
         </div>
-        <div id="textalign">
-            <h2 style ="font-size: 50px">GEETA BHATIA</h2>
-            <p style ="font-size: 30px" >Geeta has been working in the daycare industry for almost a decade, starting back in 2015. Over the years, they have gained invaluable experience in creating safe, nurturing environments where children can thrive. She loves working with children and takes pride in fostering creativity and confidence in each child they care for.</p>
+        <div id="textalign" class="foreground">
+            <h2 style ="font-size: 50px" class="foreground">GEETA BHATIA</h2>
+            <p style ="font-size: 30px" class="foreground">Geeta has been working in the daycare industry for almost a decade, starting back in 2016. Over the years, they have gained invaluable experience in creating safe, nurturing environments where children can thrive. She loves working with children and takes pride in fostering creativity and confidence in each child they care for.</p>
         </div>
     </div>
-    <!--
     <br> <br> <br> <br>
-    <div class="images-text-pair">
-        <div id="images-2">
-            <img src="images/twotester.jpg" alt="Images242424">
-        </div>
-        
-        <div id="textalign-2">
-            <h2 style = "font-size: 50px">CHITRA SHIRKE</h2>
-            <p style = "font-size: 30px"> Chitra has been in the daycare industry for roughly three years, starting back in 2021. Over the years, they've also gained similar invaluable experience in creating safe, nurturing environments for children. She has a deep passion for working with children and is dedicated to ensuring their safety.</p></p>
-        </div> 
-        -->
-    </div>
 </section>
-</section id="middle-end">
+<section id="middle-end">
     <!-- hours list and contacts in this section-->
     <!-- please note that any of the svg custom shapes were made with a website. -->
-    <div class="custom-shape-divider-top-1718647519">
-        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-        </svg>
+    <div class="wave-bottom"></div>
+    <div id="containerUp">
+
     </div>
     <div class="heading-center">
-        <br> <br> <br> <br> <br> 
-        <h2>Hours of Availability:</h2>
+        <h2 class="moveup">Hours of Availability:</h2>
     </div>
-   <!-- <p id="special-case">Monday-Friday</p> -->
     <div class="hours-container">
         <div class="hours-list left">
-            <ul>
+            <ul class="moveup">
                 <li>M: 8:00 AM - 5:00 PM</li>
                 <li>T: 8:00 AM - 5:00 PM</li>
                 <li>W: 8:00 AM - 5:00 PM</li>
@@ -80,8 +59,8 @@
             </ul>
         </div>
         <div class="hours-list right">
-            <ul>
-                <li>HOLDAY LIST</li>
+            <ul class="moveup">
+                <li>HOLIDAY LIST</li>
                 <li>New Years Eve (December 31)</li>
                 <li>New Years Day (Jan 1)</li>
                 <li>MLK Jr. Day (3rd Monday of January)</li>
@@ -97,12 +76,16 @@
             </ul>
         </div>
     </div>
-    <br><br><br><br><br>
     <div class="center-different">
         <p>Phone Number: +1 630-318-6465</p>
         <p>Email Address: info@galaxyhomedaycare.com</p>
-    </div>
-</br>  </br>  </br>  </br>  
+    </div>  
+</section>
+<section id="end">
+    <div class="wave-bottom-1"></div>
+    <br><br><br>
+    <p>This part of the website will soon be updated.</p>
+</section>
 <!-- 
 </section>
 <section id="end">
@@ -137,6 +120,7 @@
 -->
 
 <!-- the above section is currently commented because I have literally nothing to put in there -->
+    </div>
 </body>
 </html>
 
