@@ -8,6 +8,13 @@ html, body {
     box-sizing: border-box;
 }
 
+#headerimage {
+    width: 80%;
+    box-shadow: solid 2px;
+    box-shadow: gray 0 0 10px;
+    border: solid 1px rgb(80, 80, 80);
+}
+
 *, *::before, *::after {
     box-sizing: inherit;
 }
@@ -21,6 +28,14 @@ html, body {
     z-index: 10;
 }
 
+#imageslider {
+    background-color: red;
+    height: 60%;
+    width: 80%;
+    left: 11%;
+    position: absolute;
+    top: 30%;
+}
 
 .moveup {
     top: 0;
@@ -35,6 +50,20 @@ html, body {
     opacity: 1;
     position: relative;
     
+}
+
+#buttonright {
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+#buttonleft {
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    left: 0;
 }
 
 canvas {
