@@ -6,11 +6,24 @@ html, body {
     scrollbar-width: none;
     overflow-x:hidden;
     box-sizing: border-box;
+    min-height: 100vh;
 }
+
+.showcaseimage {
+    opacity: 1;
+    left: 0%;
+    position: absolute;
+    transition: all 0.15s ease-out;
+}
+
+.showcaseimage.hide {
+    opacity: 0;
+    transition: all 0.15s ease-out;
+}
+
 
 #headerimage {
     width: 80%;
-    box-shadow: solid 2px;
     box-shadow: gray 0 0 10px;
     border: solid 1px rgb(80, 80, 80);
     object-fit:cover;
@@ -18,7 +31,7 @@ html, body {
 }
 
 *, *::before, *::after {
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
 .foreground {
@@ -31,12 +44,15 @@ html, body {
 }
 
 #imageslider {
-    background-color: red;
-    height: 60%;
+    overflow: hidden;
+    height: 80%;
     width: 80%;
-    left: 11%;
+    left: 10%;
     position: absolute;
-    top: 30%;
+    top: 15%;
+    border: solid 1px rgb(80, 80, 80);
+    box-shadow: gray 0 0 10px;
+    border-radius: 5px;
 }
 
 .moveup {
@@ -55,17 +71,42 @@ html, body {
 }
 
 #buttonright {
-    width: 100px;
+    width: 75px;
     position: absolute;
-    top: 50%;
+    top: 55%;
     right: 0;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    transform: translateY(-50%);
+    color: rgba(255,255,255,0.5);
+    cursor: pointer;
+    border-radius: .25rem;
+    padding: 0 .5rem;
+    background-color: rgba(255,255,255,0.1);
+    transition: all 0.15s ease-out;
 }
 
 #buttonleft {
-    width: 100px;
+    width: 75px;
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 0;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    transform: translateY(-50%);
+    color: rgba(255,255,255,0.5);
+    cursor: pointer;
+    border-radius: .25rem;
+    padding: 0 .5rem;
+    background-color: rgba(255,255,255,0.1);
+    transition: all 0.15s ease-out;
+}
+
+#buttonleft:hover, #buttonright:hover{
+    color: white;
+    background-color: rgba(255,255,255,0.2);
 }
 
 canvas {
@@ -212,6 +253,8 @@ section {
     padding: 5px 0;
 }
 #end {
+    padding: 0;
+    margin: 0;
     width: 100%;
     min-width: 100%;
     display: flex;
@@ -466,6 +509,9 @@ section {
 }
 
 @media (max-width: 480px) {
+    #contactus {
+        width: 100px;
+    }
     .heading-center h2 {
         font-size: 30px;
     }
@@ -493,6 +539,9 @@ section {
 }
 
 @media (max-width: 768px) {
+    #contactus {
+        width: 300px;
+    }
     .custom-shape-divider-top-1718647519 svg,
     .custom-shape-divider-top-1719257915 svg,
     .custom-shape-divider-top-1719257810 svg,
@@ -537,6 +586,9 @@ section {
 }
 
 @media (max-width: 768px) {
+    #showcaseimage {
+        object-fit: contain;
+    }
     .image-collage img {
         width: 200px;
         height: auto;
