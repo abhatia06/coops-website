@@ -9,6 +9,18 @@ html, body {
     min-height: 100vh;
 }
 
+.banner {
+    background: linear-gradient(to right, #5b4caf, #c1b6f5);
+    color: black;
+    font-size: 20px;
+    text-align: center; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    top: 0;
+    z-index: 1000;
+    height: 125px;
+    position:sticky;
+}
+
 .showcaseimage {
     opacity: 1;
     left: 0%;
