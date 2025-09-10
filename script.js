@@ -8,10 +8,10 @@ let timeoutID;
 for (let i = 0; i < starCount; i++) {
     const star = document.createElement('div');
     star.classList.add('star');
-    star.style.top = `${Math.random() * 100}%`;
-    star.style.left = `${Math.random() * 100}%`;
+    star.style.top = (Math.random() * 100) + '%';
+    star.style.left = (Math.random() * 100) + '%';
     star.style.zIndex = 0;
-    star.style.animationDuration = `${Math.random() * 3 + 2}s`;
+    star.style.animationDuration = (Math.random() * 3 + 2) + 's';
     starField.appendChild(star);
 }
 
@@ -43,7 +43,7 @@ function animate() {
 
     for (let i = shootingStars.length - 1; i >= 0; i--) {
       const s = shootingStars[i];
-      ctx.strokeStyle = `rgba(255, 255, 255, ${s.alpha})`;
+      ctx.strokeStyle = 'rgba(255, 255, 255, ' + {s.alpha} + ')';
       ctx.beginPath();
       ctx.moveTo(s.x, s.y);
       ctx.lineTo(s.x + s.length, s.y + s.length * 0.3);
@@ -73,42 +73,13 @@ window.addEventListener('resize', () => {
     canvas.height = window.innerHeight;
 });
 
-
-
-// this is gonna be the crux of how we're gonna do this
-
 let currentindex = 0;
-
-const image1 = new Image();
-image1.src = "images/image3.jpg";
-const image2 = new Image();
-image2.src = "images/image2.jpg";
-const image3 = new Image();
-image3.src = "images/image1.png";
-const image4 = new Image();
-image4.src = "images/image4.jpg";
-const image5 = new Image();
-image5.src = "images/image5.jpg";
-const image6 = new Image();
-image6.src = "images/image6.jpg";
-const image7 = new Image();
-image7.src = "images/image7.jpg";
-const image8 = new Image();
-image8.src = "images/image8.jpg";
-const image9 = new Image();
-image9.src = "images/image9.jpg";
-
-
 let imagelist = [];
-imagelist.push(image1);
-imagelist.push(image2);
-imagelist.push(image3);
-imagelist.push(image4);
-imagelist.push(image5);
-imagelist.push(image6);
-imagelist.push(image7);
-imagelist.push(image8);
-imagelist.push(image9);
+for(let i = 1; i <= 9; i++) {
+    const image = new Image();
+    image.src = "images/image" + i + ".jpg";
+    imagelist.push(image);
+}
 
 let imageslider = document.getElementById('imageslider');
 for(let i = 0; i < imagelist.length; i++) {
@@ -183,3 +154,4 @@ function resetTimerAndAutomaticCall() {
         resetTimerAndAutomaticCall();
     }, timer);
 }
+
