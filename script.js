@@ -43,11 +43,11 @@ function animate() {
 
     for (let i = shootingStars.length - 1; i >= 0; i--) {
       const s = shootingStars[i];
-      ctx.strokeStyle = 'rgba(255, 255, 255, ' + {s.alpha} + ')';
+      ctx.strokeStyle = 'rgba(255, 255, 255, ' + s.alpha + ')';
       ctx.beginPath();
       ctx.moveTo(s.x, s.y);
       ctx.lineTo(s.x + s.length, s.y + s.length * 0.3);
-      ctx.stroke();s
+      ctx.stroke();
 
       s.x += 10;
       s.y += 3;
@@ -154,4 +154,5 @@ function resetTimerAndAutomaticCall() {
         resetTimerAndAutomaticCall();
     }, timer);
 }
+
 
